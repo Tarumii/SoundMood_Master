@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "../styles/login.css";
+import "../styles/Login.css";
 import SplashScreen from "../components/splashscreen";
 
 const Login = () => {
