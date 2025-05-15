@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/playlist.css";
+import "../styles/Playlist.css";
 
 export default function Playlist() {
   const [spotifyToken, setSpotifyToken] = useState<string | null>(null);
