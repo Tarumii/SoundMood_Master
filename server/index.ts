@@ -23,6 +23,8 @@ app.route("/api/spotify", spotify);
 
 app.route("/api/playlist", playlist);
 
+app.get('/healthz', (c) => c.text("OK"));
+
 export default {
   port: 3001,
   fetch: app.fetch,
