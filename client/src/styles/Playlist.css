@@ -1,0 +1,199 @@
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #1e1e1e;
+    font-family: "Segoe UI", sans-serif;
+    overflow: hidden;
+  }
+  
+  .playlist-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+    padding: 2rem;
+    z-index: 1;
+  }
+  
+  .playlist-title {
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .playlist-title span {
+    color: #6366f1;
+  }
+  
+  .playlist-subtitle {
+    color: #ccc;
+    margin: 1rem 0 2rem;
+    max-width: 600px;
+  }
+  
+  .playlist-button {
+    background-color: #6366f1;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .playlist-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px #7b7dec;
+  }
+  
+  .profile-header {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+  }
+  
+  .profile-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #6366f1;
+    transition: transform 0.3s;
+  }
+  
+  .profile-img:hover {
+    transform: scale(1.05);
+  }
+  
+  .emoji {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.07;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .emoji-top-left {
+    top: 5%;
+    left: 5%;
+  }
+  
+  .emoji-top-right {
+    top: 10%;
+    right: 10%;
+  }
+  
+  .emoji-center-left {
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+  
+  .emoji-bottom-right {
+    bottom: 10%;
+    right: 15%;
+  }
+  
+  .emoji-bottom-left {
+    bottom: 8%;
+    left: 10%;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .waveform-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.9;
+  }
+  
+  .waveform-svg {
+    width: 200%;
+    height: 100%;
+    animation: scrollWave 20s linear infinite;
+    transform: translateX(0);
+  }
+  
+  @keyframes scrollWave {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-25%);
+    }
+  }
+  
+  .nebula-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #1e1e1e, #0f0f0f);
+  }
+  
+  .stars, .twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-repeat: repeat;
+    animation: move 100s linear infinite;
+    opacity: 0.3;
+  }
+  
+  .stars {
+    background-image: radial-gradient(white 1px, transparent 1px),
+      radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+  }
+  
+  .twinkling {
+    background-image: radial-gradient(#6366f1 1px, transparent 1px),
+      radial-gradient(#6366f1 1px, transparent 1px);
+    background-size: 80px 80px;
+    background-position: 0 0, 40px 40px;
+    animation: twinkle 5s infinite ease-in-out alternate;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  @keyframes twinkle {
+    0% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0.4;
+    }
+  }

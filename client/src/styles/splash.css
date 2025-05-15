@@ -1,0 +1,57 @@
+.splash {
+    position: fixed;
+    inset: 0;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    animation: fadeOut 1.2s ease-in-out 2.8s forwards;
+  }
+  
+  .splash-content {
+    text-align: center;
+    color: white;
+    animation: zoomIn 1s ease, fadeOut 1.2s ease-in-out 2.8s forwards;
+  }  
+  
+  .splash-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #8ab4f8;
+    margin-bottom: 0.5rem;
+  }
+  
+  .splash-subtitle {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  .splash-emojis span {
+    font-size: 2rem;
+    margin: 0 0.5rem;
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.95);
+      visibility: hidden;
+    }
+  }
